@@ -1,0 +1,10 @@
+DATA lambs; 
+INPUT rna intake @@; 
+DATALINES; 
+ 195 7.9 201 8.3 295 9.1 301 7.4 
+ 400 8.6 500 7.5 600 10.7 720 9.7 
+ 1020 10.4 3100 9.5 4100 9.0 6100 11.3 
+; 
+PROC CORR DATA = lambs SPEARMAN; 
+VAR rna intake; 
+RUN;
